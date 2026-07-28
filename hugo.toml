@@ -1,0 +1,24 @@
+baseURL = "/"
+title = "我的科研主页"
+theme = "PaperMod"
+defaultContentLanguage = "zh-cn"
+paginate = 10
+
+[params]
+  homeInfoParams = {Title = "Pides科研主页", Content = "华中科技大学能源学院在读博士生，欢迎访问我的科研记录站"}
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  math = true
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "技术笔记"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    identifier = "projects"
+    name = "科研项目"
+    url = "/projects/"
+    weight = 2
