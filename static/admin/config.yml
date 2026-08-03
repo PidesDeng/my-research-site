@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: PidesDeng/my-research-site # 替换为你的 GitHub 仓库路径
+  branch: main
+
+media_folder: "static/images" # 图片存放位置
+public_folder: "/images"
+
+collections:
+  - name: "posts" # 对应你的技术笔记
+    label: "技术笔记"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "开启公式", name: "math", widget: "boolean", default: true}
+      - {label: "正文", name: "body", widget: "markdown"}

@@ -88,7 +88,20 @@ $p(\psi)$ 和 $F(\psi)$ 分别代表等离子体压强和极向电流通量。
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="//localhost:1313/posts/first-research/">
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+<meta property="og:url" content="//localhost:1313/posts/first-research/">
   <meta property="og:site_name" content="Pides | 科研主页">
   <meta property="og:title" content="磁约束核聚变等离子体平衡模拟流程">
   <meta property="og:description" content="1. 研究背景 核聚变能被认为是人类未来的终极能源。本研究专注于托卡马克（Tokamak）装置中等离子体的平衡态模拟。为了实现稳定的聚变反应，必须精确计算强磁场约束下等离子体的空间分布。
