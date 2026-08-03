@@ -1,16 +1,31 @@
 baseURL = "/"
-title = "我的科研主页"
+title = "Pides | 核工程科研主页"
 theme = "PaperMod"
 defaultContentLanguage = "zh-cn"
+languageCode = "zh-cn"
 paginate = 10
 
 [params]
-  homeInfoParams = {Title = "Pides科研主页", Content = "华中科技大学能源学院在读博士生，欢迎访问我的科研记录站"}
+  # 基础信息配置
+  env = "production"
+  description = "华中科技大学能源学院核工程在读博士生，专注于中子输运模拟与多物理场耦合研究。"
+  author = "Pides"
+  
+  # 首页大文字展示
+  [params.homeInfoParams]
+    Title = "Pides的科研记录站"
+    Content = "👋 欢迎访问我的个人学术空间。这里记录了我的科研流程、技术细节以及在核工程领域的探索。"
+
+  # UI 细节优化
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  
+  # 开启数学公式渲染支持 (LaTeX)
   math = true
 
+# 导航栏配置
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -22,9 +37,16 @@ paginate = 10
     name = "科研项目"
     url = "/projects/"
     weight = 2
-   [[menu.main]]
-  identifier = "notion"
-  name = "实验室日志 (Notion)"
-  url = "https://www.notion.so/你的页面ID" # 这里替换为你的Notion链接
-  weight = 3
+  [[menu.main]]
+    identifier = "notion"
+    name = "实验室日志 (Notion)"
+    url = "https://app.notion.com/p/3b1a5c6993c180dba33dc40cd30c0950?source=copy_link" # 记得填入你的真实Notion链接
+    weight = 3
 
+# 针对 Markdown 渲染的优化
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true # 允许在 Markdown 中直接使用 HTML 标签（如嵌入视频或 iframe）
+  [markup.highlight]
+    style = "github-dark" # 代码高亮风格，适合展示 MCNP/Python 代码
+    lineNos = true

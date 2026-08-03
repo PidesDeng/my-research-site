@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>我的科研主页</title>
+    <title>Pides | 核工程科研主页</title>
     <link>//localhost:1313/</link>
-    <description>Recent content on 我的科研主页</description>
+    <description>Recent content on Pides | 核工程科研主页</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于MCNP的中子输运模拟流程</title>
+      <link>//localhost:1313/posts/first-research/</link>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/first-research/</guid>
+      <description>&lt;h2 id=&#34;研究背景&#34;&gt;研究背景&lt;/h2&gt;
+&lt;p&gt;本研究基于蒙特卡洛方法，对反应堆堆芯中子输运过程进行数值模拟分析。&lt;/p&gt;
+&lt;h2 id=&#34;核心方程&#34;&gt;核心方程&lt;/h2&gt;
+&lt;p&gt;稳态中子输运方程如下：&lt;/p&gt;
+&lt;p&gt;$$
+\Omega \cdot \nabla \psi(\vec{r}, E, \Omega) + \Sigma_t \psi = \int_0^\infty \int_{4\pi} \Sigma_s \psi , d\Omega&amp;rsquo; dE&amp;rsquo; + S
+$$&lt;/p&gt;
+&lt;h2 id=&#34;计算流程&#34;&gt;计算流程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;建立几何模型&lt;/li&gt;
+&lt;li&gt;定义材料截面数据&lt;/li&gt;
+&lt;li&gt;设置粒子源项&lt;/li&gt;
+&lt;li&gt;运行MCNP计算&lt;/li&gt;
+&lt;li&gt;提取通量分布结果&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
   </channel>
 </rss>
