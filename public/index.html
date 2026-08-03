@@ -163,19 +163,23 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">基于MCNP的中子输运模拟流程
+    <h2 class="entry-hint-parent">磁约束核聚变等离子体平衡模拟流程
     </h2>
   </header>
   <div class="entry-content">
-    <p>研究背景 本研究基于蒙特卡洛方法，对反应堆堆芯中子输运过程进行数值模拟分析。
-核心方程 稳态中子输运方程如下：
-$$ \Omega \cdot \nabla \psi(\vec{r}, E, \Omega) &#43; \Sigma_t \psi = \int_0^\infty \int_{4\pi} \Sigma_s \psi , d\Omega’ dE’ &#43; S $$
-计算流程 建立几何模型 定义材料截面数据 设置粒子源项 运行MCNP计算 提取通量分布结果 </p>
+    <p>1. 研究背景 核聚变能被认为是人类未来的终极能源。本研究专注于托卡马克（Tokamak）装置中等离子体的平衡态模拟。为了实现稳定的聚变反应，必须精确计算强磁场约束下等离子体的空间分布。
+2. 核心物理方程 等离子体的宏观平衡由 Grad-Shafranov (G-S) 方程 描述。该方程是一个非线性二阶偏微分方程，其形式如下：
+$$ \Delta^* \psi = -\mu_0 R^2 \frac{dp}{d\psi} - F \frac{dF}{d\psi} $$
+其中：
+$\psi$ 是磁通量函数。 $\Delta^*$ 是算符 $R \frac{\partial}{\partial R} (\frac{1}{R} \frac{\partial}{\partial R}) &#43; \frac{\partial^2}{\partial Z^2}$。 $p(\psi)$ 和 $F(\psi)$ 分别代表等离子体压强和极向电流通量。 3. 技术执行流程 在实际模拟过程中，我们通常遵循以下技术路线：
+几何参数定义：设定托卡马克装置的大半径 $R_0$、小半径 $a$ 以及第一壁的几何轮廓。 约束条件设置：给定等离子体电流 $I_p$ 和安全因子 $q$ 的剖面分布。 数值求解：利用有限元法（FEM）或差分法对 G-S 方程进行迭代求解，获取磁面分布。 稳定性分析：基于平衡解，进一步分析等离子体在 MHD（磁流体动力学）意义下的稳定性。 4. 模拟结果可视化 通过模拟，我们可以得到典型的等离子体截面磁通量分布图（即“D”形截面）。这些数据对于后续的加热（NBI/ICRF）和输运计算至关重要。
+注：本笔记仅记录模拟算法逻辑，具体实验参数请参考相关实验数据手册。
+</p>
   </div>
   <footer class="entry-footer">
 
-<span title='2026-07-29 00:00:00 +0000 UTC'>July 29, 2026</span>&nbsp;·&nbsp;<span>Pides</span></footer>
-  <a class="entry-link" aria-label="post link to 基于MCNP的中子输运模拟流程" href="//localhost:1313/posts/first-research/"></a>
+<span title='2026-08-03 00:00:00 +0000 UTC'>August 3, 2026</span>&nbsp;·&nbsp;<span>Pides</span></footer>
+  <a class="entry-link" aria-label="post link to 磁约束核聚变等离子体平衡模拟流程" href="//localhost:1313/posts/first-research/"></a>
 </article>
     </main>
     

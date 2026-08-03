@@ -6,28 +6,38 @@
     <description>Recent content in Posts on Pides | 科研主页</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>基于MCNP的中子输运模拟流程</title>
+      <title>磁约束核聚变等离子体平衡模拟流程</title>
       <link>//localhost:1313/posts/first-research/</link>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/first-research/</guid>
-      <description>&lt;h2 id=&#34;研究背景&#34;&gt;研究背景&lt;/h2&gt;
-&lt;p&gt;本研究基于蒙特卡洛方法，对反应堆堆芯中子输运过程进行数值模拟分析。&lt;/p&gt;
-&lt;h2 id=&#34;核心方程&#34;&gt;核心方程&lt;/h2&gt;
-&lt;p&gt;稳态中子输运方程如下：&lt;/p&gt;
+      <description>&lt;h2 id=&#34;1-研究背景&#34;&gt;1. 研究背景&lt;/h2&gt;
+&lt;p&gt;核聚变能被认为是人类未来的终极能源。本研究专注于托卡马克（Tokamak）装置中等离子体的平衡态模拟。为了实现稳定的聚变反应，必须精确计算强磁场约束下等离子体的空间分布。&lt;/p&gt;
+&lt;h2 id=&#34;2-核心物理方程&#34;&gt;2. 核心物理方程&lt;/h2&gt;
+&lt;p&gt;等离子体的宏观平衡由 &lt;strong&gt;Grad-Shafranov (G-S) 方程&lt;/strong&gt; 描述。该方程是一个非线性二阶偏微分方程，其形式如下：&lt;/p&gt;
 &lt;p&gt;$$
-\Omega \cdot \nabla \psi(\vec{r}, E, \Omega) + \Sigma_t \psi = \int_0^\infty \int_{4\pi} \Sigma_s \psi , d\Omega&amp;rsquo; dE&amp;rsquo; + S
+\Delta^* \psi = -\mu_0 R^2 \frac{dp}{d\psi} - F \frac{dF}{d\psi}
 $$&lt;/p&gt;
-&lt;h2 id=&#34;计算流程&#34;&gt;计算流程&lt;/h2&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\psi$ 是磁通量函数。&lt;/li&gt;
+&lt;li&gt;$\Delta^*$ 是算符 $R \frac{\partial}{\partial R} (\frac{1}{R} \frac{\partial}{\partial R}) + \frac{\partial^2}{\partial Z^2}$。&lt;/li&gt;
+&lt;li&gt;$p(\psi)$ 和 $F(\psi)$ 分别代表等离子体压强和极向电流通量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-技术执行流程&#34;&gt;3. 技术执行流程&lt;/h2&gt;
+&lt;p&gt;在实际模拟过程中，我们通常遵循以下技术路线：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;建立几何模型&lt;/li&gt;
-&lt;li&gt;定义材料截面数据&lt;/li&gt;
-&lt;li&gt;设置粒子源项&lt;/li&gt;
-&lt;li&gt;运行MCNP计算&lt;/li&gt;
-&lt;li&gt;提取通量分布结果&lt;/li&gt;
-&lt;/ol&gt;</description>
+&lt;li&gt;&lt;strong&gt;几何参数定义&lt;/strong&gt;：设定托卡马克装置的大半径 $R_0$、小半径 $a$ 以及第一壁的几何轮廓。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;约束条件设置&lt;/strong&gt;：给定等离子体电流 $I_p$ 和安全因子 $q$ 的剖面分布。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数值求解&lt;/strong&gt;：利用有限元法（FEM）或差分法对 G-S 方程进行迭代求解，获取磁面分布。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;稳定性分析&lt;/strong&gt;：基于平衡解，进一步分析等离子体在 MHD（磁流体动力学）意义下的稳定性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;4-模拟结果可视化&#34;&gt;4. 模拟结果可视化&lt;/h2&gt;
+&lt;p&gt;通过模拟，我们可以得到典型的等离子体截面磁通量分布图（即“D”形截面）。这些数据对于后续的加热（NBI/ICRF）和输运计算至关重要。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;注：本笔记仅记录模拟算法逻辑，具体实验参数请参考相关实验数据手册。&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
