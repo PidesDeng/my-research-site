@@ -22,3 +22,9 @@ paginate = 10
     name = "科研项目"
     url = "/projects/"
     weight = 2
+   [[menu.main]]
+  identifier = "notion"
+  name = "实验室日志 (Notion)"
+  url = "https://www.notion.so/你的页面ID" # 这里替换为你的Notion链接
+  weight = 3
+
