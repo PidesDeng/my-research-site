@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Pides | 核工程科研主页"
+title = "Pides | 科研主页"
 theme = "PaperMod"
 defaultContentLanguage = "zh-cn"
 languageCode = "zh-cn"
@@ -8,13 +8,13 @@ paginate = 10
 [params]
   # 基础信息配置
   env = "production"
-  description = "华中科技大学能源学院核工程在读博士生，专注于中子输运模拟与多物理场耦合研究。"
+  description = "华中科技大学能源学院在读博士生"
   author = "Pides"
   
   # 首页大文字展示
   [params.homeInfoParams]
     Title = "Pides的科研记录站"
-    Content = "👋 欢迎访问我的个人学术空间。这里记录了我的科研流程、技术细节以及在核工程领域的探索。"
+    Content = "👋 欢迎访问我的个人学术空间。这里记录了我的科研流程、技术细节以及在不同领域的探索。"
 
   # UI 细节优化
   ShowReadingTime = true
